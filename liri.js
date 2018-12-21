@@ -33,9 +33,11 @@ function concertInfo(input) {
         var concert = response.data;
         
         for(var i = 0; i < concert.length; i++) {
+            console.log("**************************Search Result**************************");
             console.log("\nVenue: " + concert[i].venue.name);
             console.log("Location: " + concert[i].venue.city);
-            console.log("Date of the Event: " + moment(concert[i].datetime).format("MM/DD/YYYY"));
+            console.log("Date of the Event: " + moment(concert[i].datetime).format("MM/DD/YYYY") + "\n");
+            console.log("*****************************************************************\n");
         }
     }).catch(err => {
         if (err) throw err;
@@ -50,13 +52,15 @@ function movieInfo(input) {
         .then(function(response) {
             var movie = response.data;
             
+            console.log("**************************Search Result**************************");
             console.log("\nTitle: " + movie.Title);
             console.log("Year: " + movie.Year);
             console.log("IMDB Rating: " + movie.imdbRating);
             console.log("Rotten Tomatoes Rating: " + movie.Ratings[1].Value);
             console.log("Language: " + movie.Language);
             console.log("Plot: " + movie.Plot);
-            console.log("Actors: " + movie.Actors);
+            console.log("Actors: " + movie.Actors + "\n");
+            console.log("*****************************************************************\n");
     }).catch(err => {
         if (err) throw err;
     });
@@ -71,10 +75,12 @@ function songInfo(input) {
 
         var song = data.tracks.items;
         
+        console.log("**************************Search Result**************************");
         console.log("\nArtist(s): " + song[0].artists[0].name);
         console.log("Song Title: " + song[0].name);
         console.log("Album Title: " + song[0].album.name);
-        console.log("Preview URL: " + song[0].preview_url);
+        console.log("Preview URL: " + song[0].preview_url + "\n");
+        console.log("*****************************************************************\n");
     });
 }
 
