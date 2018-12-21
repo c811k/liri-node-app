@@ -50,7 +50,7 @@ This will show the following information about the song in user's terminal/bash 
 * Artist(s)
 * The title of the song
 * The title of the album
-* A prewview link of the song from Spotify
+* A preview link of the song from Spotify
 
 ![Image of spotify-this-song](/images/spotify-this-song.png)
 
